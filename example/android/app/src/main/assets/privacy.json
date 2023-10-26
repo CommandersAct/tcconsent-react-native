@@ -1,0 +1,155 @@
+{
+  "information": {
+    "update": "2023-09-05",
+    "version": "003",
+    "vendors": "50,39,264,272,793,23,12,285,416,755,755,755,278,79,184,915,71,21,32,25,790,156,284",
+    "google_vendors": "2687,2695,2830",
+    "consentDurationInMonths": 6,
+    "significantChanges": "",
+    "resetSave": ""
+  },
+  "components": {
+    "firstLayerButton": [
+      "Detail",
+      "AcceptAll",
+      "RefuseAll"
+    ],
+    "secondLayerButton": [
+      "Save",
+      "AcceptAll",
+      "RefuseAll"
+    ]
+  },
+  "customisation": {
+    "content": {
+      "fontcolor": "#111215",
+      "backgroundcolor": "#FFFFFF",
+      "bordercolor": "#414142"
+    },
+    "button": {
+      "fontcolor": "#ffffff",
+      "backgroundcolor": "#0A78E3",
+      "disabledBackground": "#aeb5bb",
+      "linkcolor": "#0A78E3"
+    },
+    "order": [
+      "IAB"
+    ]
+  },
+  "texts_fr": {
+    "generic": {
+      "illustationsButton": "illustrations",
+      "dataCategoriesDef": "Categories de Data",
+      "saveButton": "Valider",
+      "detailButton": "Détails",
+      "acceptAllButton": "Tout Accepter",
+      "refuseAllButton": "Tout Refuser",
+      "vendorButton": "Afficher les tiers",
+      "purposeButton": "Afficher les finalités",
+      "legalButton": "Informations légales",
+      "backButton": "Retour",
+      "purposeDef": "Finalités",
+      "consentDef": "Consentement",
+      "legIntPurposeDef": "Intérêt légitime",
+      "flexiblePurposeDef": "Finalités flexibles",
+      "specialPurposeDef": "Finalités spéciales",
+      "featureDef": "Fonctionnalités",
+      "specialFeatureDef": "Fonctionnalités spéciales",
+      "partnersLinkText": "Les tiers de la publicité",
+      "relatedVendorsButton": "Voir les tiers associés",
+      "month": "mois",
+      "day": "jours",
+      "seconds": "secondes",
+      "hours": "heures"
+    },
+    "popup": {
+      "title": "Paramétrez vos choix",
+      "content": "Pour chacune des finalités, finalités spéciales, fonctionnalités et fonctionnalités spéciales, vous pouvez contrôler l'activation (consentement) ou la désactivation (refus / retrait du consentement ou opposition à l’intérêt légitime) des traceurs et la création des profils. La position et du curseur indique si l’usage des traceurs et la création de profils sont autorisés (à gauche) ou refusés (à droite). Les SDK à des fins techniques (ex. authentification, sécurité, CMP...) sont indispensables au bon fonctionnement de nos services et ne peuvent être désactivés. Certains de nos partenaires peuvent traiter les données sur la base de l’intérêt légitime et vous pouvez vous y opposer en positionnant le curseur à gauche. Vos choix ne seront valides que sur l'appareil que vous utilisez actuellement.\n",
+      "purposeTitle": "",
+      "specialPurposeTitle": "",
+      "featureTitle": "",
+      "specialFeatureTitle": ""
+    },
+    "purposes": {
+      "title": "Paramétrez vos choix",
+      "content": "",
+      "privacy_policy_text": "",
+      "privacy_policy_url": ""
+    },
+    "vendors": {
+      "title": "Paramétrez vos choix",
+      "content": "",
+      "privacyPolicyText": "Politique de confidentialité",
+      "deviceStorageTitle": "Type de stockage:",
+      "deviceStorageCookieLifetime": "Durée du cookie: ",
+      "deviceStorageOther": "Autres",
+      "deviceStorageCookies": "Cookies",
+      "googleVendorsDef": "Partenaires Google Ad Technology",
+      "domainsDef": "liste des domaines utilisés",
+      "IABVendorsDef": "liste des partenaires IAB",
+      "legIntClaimTitle": "Politique de legitimate"
+    },
+    "others": {
+      "title_purpose": "Autres usages",
+      "title_vendors": "Autres solutions"
+    }
+  },
+  "texts": {
+    "generic": {
+      "illustationsButton": "illustrations",
+      "dataCategoriesDef": "Categories de Data",
+      "saveButton": "Valider",
+      "detailButton": "Détails",
+      "acceptAllButton": "Tout Accepter",
+      "refuseAllButton": "Tout Refuser",
+      "vendorButton": "Afficher les tiers",
+      "purposeButton": "Afficher les finalités",
+      "legalButton": "Informations légales",
+      "backButton": "Retour",
+      "purposeDef": "Finalités",
+      "consentDef": "Consentement",
+      "legIntPurposeDef": "Intérêt légitime",
+      "flexiblePurposeDef": "Finalités flexibles",
+      "specialPurposeDef": "Finalités spéciales",
+      "featureDef": "Fonctionnalités",
+      "specialFeatureDef": "Fonctionnalités spéciales",
+      "partnersLinkText": "Les tiers de la publicité",
+      "relatedVendorsButton": "Voir les tiers associés",
+      "month": "mois",
+      "day": "jours",
+      "seconds": "secondes",
+      "hours": "heures"
+    },
+    "popup": {
+      "title": "Paramétrez vos choix",
+      "content": "Pour chacune des finalités, finalités spéciales, fonctionnalités et fonctionnalités spéciales, vous pouvez contrôler l'activation (consentement) ou la désactivation (refus / retrait du consentement ou opposition à l’intérêt légitime) des traceurs et la création des profils. La position et du curseur indique si l’usage des traceurs et la création de profils sont autorisés (à gauche) ou refusés (à droite). Les SDK à des fins techniques (ex. authentification, sécurité, CMP...) sont indispensables au bon fonctionnement de nos services et ne peuvent être désactivés. Certains de nos partenaires peuvent traiter les données sur la base de l’intérêt légitime et vous pouvez vous y opposer en positionnant le curseur à gauche. Vos choix ne seront valides que sur l'appareil que vous utilisez actuellement.\n",
+      "purposeTitle": "",
+      "specialPurposeTitle": "",
+      "featureTitle": "",
+      "specialFeatureTitle": ""
+    },
+    "purposes": {
+      "title": "Paramétrez vos choix",
+      "content": "",
+      "privacy_policy_text": "",
+      "privacy_policy_url": ""
+    },
+    "vendors": {
+      "title": "Paramétrez vos choix",
+      "content": "",
+      "privacyPolicyText": "Politique de confidentialité",
+      "deviceStorageTitle": "Type de stockage:",
+      "deviceStorageCookieLifetime": "Durée du cookie: ",
+      "deviceStorageOther": "Autres",
+      "deviceStorageCookies": "Cookies",
+      "googleVendorsDef": "Partenaires Google Ad Technology",
+      "domainsDef": "liste des domaines utilisés",
+      "IABVendorsDef": "Solutions IAB",
+      "legIntClaimTitle": "Politique de legitimate"
+    },
+    "others": {
+      "title_purpose": "Autres usages",
+      "title_vendors": "Autres solutions"
+    }
+  }
+}
