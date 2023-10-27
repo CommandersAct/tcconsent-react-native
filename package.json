@@ -1,6 +1,6 @@
 {
   "name": "tcconsent-react-native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " Commanders Act's TCConsent SDK bridge for react native",
   "main": "src/index",
   "module": "src/index",
@@ -80,7 +80,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "tccore-react-native": "github:commandersAct/tccore-react-native#1.0.0"
+    "tccore-react-native": "github:commandersAct/tccore-react-native#1.0.1"
   },
   "resolutions": {
     "@types/react": "17.0.21"
