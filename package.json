@@ -80,7 +80,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
-    "tccore-react-native": "github:commandersAct/tccore-react-native#1.0.1"
+    "tccore-react-native": "git+https://gitlab.tagcommander.com/mobile/tccore-react-native#develop"
   },
   "resolutions": {
     "@types/react": "17.0.21"

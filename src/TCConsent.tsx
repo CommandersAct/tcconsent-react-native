@@ -1,5 +1,5 @@
 import { NativeModules, Platform, NativeEventEmitter } from 'react-native';
-import { TCUser } from 'tccore-react-native'; 
+import { TCUserInstance } from 'tccore-react-native'; 
 
 
 
@@ -131,11 +131,11 @@ function refreshTCUser(userScheme: any)
 {
     if (Platform.OS === 'ios')
     {
-        TCUser.getInstance().initValues(userScheme)
+        TCUserInstance.initValues(userScheme)
     }
     else if (Platform.OS === 'android')
     {
-        TCUser.getInstance().initValues(JSON.parse(userScheme as string))
+        TCUserInstance.initValues(JSON.parse(userScheme as string))
     }
 }
 

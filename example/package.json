@@ -13,8 +13,8 @@
     "react": "18.2.0",
     "react-native": "^0.72.4",
     "tcconsent-react-native": "../",
-    "tccore-react-native": "github:commandersAct/tccore-react-native#1.0.0"
-  },
+    "tccore-react-native": "git+https://gitlab.tagcommander.com/mobile/tccore-react-native#develop"  
+},
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
