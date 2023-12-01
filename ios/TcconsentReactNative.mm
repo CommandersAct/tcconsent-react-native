@@ -5,7 +5,7 @@
 RCT_EXTERN_METHOD(setSiteIDPrivacyID: (double) siteID privacyID: (double) privacyID)
 RCT_EXTERN_METHOD(acceptAllConsent)
 RCT_EXTERN_METHOD(refuseAllConsent)
-RCT_EXTERN_METHOD(showPrivacyCenter)
+RCT_EXTERN_METHOD(showPrivacyCenter: (NSString *) startScreen)
 RCT_EXTERN_METHOD(useACString: (BOOL) value)
 RCT_EXTERN_METHOD(customPCMSetSiteID: (double) siteID privacyID: (double) privacyID)
 RCT_EXTERN_METHOD(setConsentDuration: (double) months)

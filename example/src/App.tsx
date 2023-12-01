@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, ScrollView} from 'react-native';
 import { TCUser } from 'tccore-react-native';
 import * as TCConsent from 'tcconsent-react-native';
+import {EPrivacyCenterStartScreen} from 'tcconsent-react-native';
 
 async function initialiseTCConsent()
 {
@@ -48,7 +49,7 @@ const ButtonRow = () => {
 
         <TouchableOpacity
           style={styles.consentButton}
-          onPress={TCConsent.showPrivacyCenter}>
+          onPress={() => TCConsent.showPrivacyCenter()}>
           <Text style={styles.buttonText}>showPrivacyCenter</Text>
         </TouchableOpacity>
         <TouchableOpacity

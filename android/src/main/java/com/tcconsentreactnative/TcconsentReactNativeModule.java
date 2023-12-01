@@ -1,5 +1,8 @@
 package com.tcconsentreactnative;
 
+import static com.tagcommander.lib.consent.TCConsentConstants.kTCStartWithPurposeScreen;
+import static com.tagcommander.lib.consent.TCConsentConstants.kTCStartWithVendorScreen;
+
 import android.content.Intent;
 import android.util.Log;
 
@@ -17,6 +20,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.tagcommander.lib.consent.ETCConsentAction;
 import com.tagcommander.lib.consent.ETCConsentSource;
 import com.tagcommander.lib.consent.TCConsent;
+import com.tagcommander.lib.consent.TCConsentConstants;
 import com.tagcommander.lib.consent.TCPrivacyCallbacks;
 import com.tagcommander.lib.consent.TCPrivacyCenter;
 import com.tagcommander.lib.core.TCDebug;
@@ -65,9 +69,11 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   }
 
   @ReactMethod
-  public void showPrivacyCenter()
+  public void showPrivacyCenter(String startScreen, String customTitle)
   {
     Intent PCM = new Intent(getReactApplicationContext(), TCPrivacyCenter.class);
+    setCustomTitle(PCM, customTitle);
+    setStartScreen(PCM, startScreen);
     PCM.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     getReactApplicationContext().startActivity(PCM);
   }
@@ -312,4 +318,24 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
 
   @ReactMethod
   public void removeListeners(Integer count) {}
+
+  private void setStartScreen(Intent pcm, String startScreen)
+  {
+    if (startScreen != null && startScreen.equals(kTCStartWithPurposeScreen))
+    {
+      pcm.putExtra(TCConsentConstants.kTCPC_START_SCREEN, kTCStartWithPurposeScreen);
+    }
+    else if (startScreen != null && startScreen.equals(kTCStartWithVendorScreen))
+    {
+      pcm.putExtra(TCConsentConstants.kTCPC_START_SCREEN, kTCStartWithVendorScreen);
+    }
+  }
+
+  private void setCustomTitle(Intent pcm, String customTitle)
+  {
+    if (customTitle != null)
+    {
+      pcm.putExtra(TCConsentConstants.kTCIntentExtraCustomTitle, customTitle);
+    }
+  }
 }

@@ -26,12 +26,13 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
         TCMobileConsent.sharedInstance().refuseAllConsent()
     }
     
-    @objc(showPrivacyCenter)
-    func showPrivacyCenter() -> Void
+    @objc(showPrivacyCenter:)
+    func showPrivacyCenter(startScreen: String?) -> Void
     {
         DispatchQueue.main.async
         {
             let PCM = TCPrivacyCenterViewController()
+            self.setPCMStartScreen(PCM: PCM, startScreen: startScreen)
             let viewController = UIApplication.shared.delegate?.window??.rootViewController
             viewController?.present(PCM, animated: true, completion: nil)
         }
@@ -213,6 +214,18 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
         if self.bridge != nil
         {
             self.sendEvent(withName: "refreshTCUser", body: TCUserJson)
+        }
+    }
+    
+    func setPCMStartScreen(PCM: TCPrivacyCenterViewController, startScreen: String?)
+    {
+        if (startScreen != nil && startScreen == "startWithVendorScreen")
+        {
+            PCM.startWithVendorScreen()
+        }
+        else if (startScreen != nil && startScreen == "startWithPurposeScreen")
+        {
+            PCM.startWithPurposeScreen()
         }
     }
 }
