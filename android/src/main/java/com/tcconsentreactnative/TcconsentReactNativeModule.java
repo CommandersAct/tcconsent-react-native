@@ -8,11 +8,13 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.module.annotations.ReactModule;
@@ -20,6 +22,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.tagcommander.lib.consent.ETCConsentAction;
 import com.tagcommander.lib.consent.ETCConsentSource;
 import com.tagcommander.lib.consent.TCConsent;
+import com.tagcommander.lib.consent.TCConsentAPI;
 import com.tagcommander.lib.consent.TCConsentConstants;
 import com.tagcommander.lib.consent.TCPrivacyCallbacks;
 import com.tagcommander.lib.consent.TCPrivacyCenter;
@@ -30,6 +33,7 @@ import com.tagcommander.lib.core.TCUser;
 import org.json.JSONException;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @ReactModule(name = TcconsentReactNativeModule.NAME)
@@ -337,5 +341,113 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     {
       pcm.putExtra(TCConsentConstants.kTCIntentExtraCustomTitle, customTitle);
     }
+  }
+
+  @ReactMethod
+  public void isConsentAlreadyGiven(Promise promise)
+  {
+    promise.resolve(TCConsentAPI.isConsentAlreadyGiven(getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void isCategoryAccepted(Double ID, Promise promise)
+  {
+    promise.resolve(TCConsentAPI.isCategoryAccepted(ID.intValue(), getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void isVendorAccepted(Double ID, Promise promise)
+  {
+    promise.resolve(TCConsentAPI.isVendorAccepted(ID.intValue(), getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void isIABPurposeAccepted(Double ID, Promise promise)
+  {
+    promise.resolve(TCConsentAPI.isIABPurposeAccepted(ID.intValue(), getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void isIABVendorAccepted(Double ID, Promise promise)
+  {
+    promise.resolve(TCConsentAPI.isIABVendorAccepted(ID.intValue(), getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void isIABSpecialFeatureAccepted(Double ID, Promise promise)
+  {
+    promise.resolve(TCConsentAPI.isIABSpecialFeatureAccepted(ID.intValue(), getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void getAcceptedCategories(Promise promise)
+  {
+    promise.resolve(toWritableStringArray(TCConsentAPI.getAcceptedCategories(getReactApplicationContext())));
+  }
+
+  @ReactMethod
+  public void getAcceptedVendors(Promise promise)
+  {
+    promise.resolve(toWritableStringArray(TCConsentAPI.getAcceptedVendors(getReactApplicationContext())));
+  }
+
+  @ReactMethod
+  public void getAcceptedGoogleVendors(Promise promise)
+  {
+    promise.resolve(toWritableStringArray(TCConsentAPI.getAcceptedGoogleVendors(getReactApplicationContext())));
+  }
+
+  @ReactMethod
+  public void getAllAcceptedConsent(Promise promise)
+  {
+    promise.resolve(toWritableStringArray(TCConsentAPI.getAllAcceptedConsent(getReactApplicationContext())));
+  }
+
+  @ReactMethod
+  public void shouldDisplayPrivacyCenter(Promise promise)
+  {
+    promise.resolve(TCConsentAPI.shouldDisplayPrivacyCenter(getReactApplicationContext()));
+  }
+
+  @ReactMethod
+  public void switchDefaultState(boolean value)
+  {
+    TCConsent.getInstance().switchDefaultState = value;
+  }
+
+  @ReactMethod
+  public void deactivateBackButton(boolean value)
+  {
+    TCConsent.getInstance().deactivateBackButton = value;
+  }
+
+  @ReactMethod
+  public void do_not_track(boolean value)
+  {
+    TCConsent.getInstance().do_not_track = value;
+  }
+
+  @ReactMethod
+  public void setConsentVersion(String value)
+  {
+    TCConsent.getInstance().consentVersion = value;
+  }
+
+  @ReactMethod
+  public void getConsentVersion(Promise promise)
+  {
+    promise.resolve(TCConsent.getInstance().consentVersion);
+  }
+
+  public static WritableArray toWritableStringArray(List<String> array)
+  {
+    WritableArray writableArray = Arguments.createArray();
+
+    for (int i = 0; i < array.size(); i++)
+    {
+      writableArray.pushString(array.get(i));
+    }
+
+    return writableArray;
   }
 }

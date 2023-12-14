@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, ScrollView} from 'react-native';
 import { TCUser } from 'tccore-react-native';
 import * as TCConsent from 'tcconsent-react-native';
+import { TCConsentAPI } from 'tcconsent-react-native';
 import {EPrivacyCenterStartScreen} from 'tcconsent-react-native';
 
 async function initialiseTCConsent()
@@ -126,6 +127,92 @@ const ButtonRow = () => {
           onPress={() => TCConsent.setLanguage("fr")}>
           <Text style={styles.buttonText}>setLanguage to "fr"</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("consentVersion = "+ await TCConsent.getConsentVersion())}>
+          <Text style={styles.buttonText}>getConsentVersion</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={() => TCConsent.do_not_track(true)}>
+          <Text style={styles.buttonText}>do_not_track(true)</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={() => TCConsent.deactivateBackButton(true)}>
+          <Text style={styles.buttonText}>deactivateBackButton(true)</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={() => TCConsent.switchDefaultState(true)}>
+          <Text style={styles.buttonText}>switchDefaultState(true)</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("isConsentAlreadyGiven = "+ await TCConsentAPI.isConsentAlreadyGiven())}>
+          <Text style={styles.buttonText}>isConsentAlreadyGiven</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("isCategoryAccepted(1) = " + await TCConsentAPI.isCategoryAccepted(1))}>
+          <Text style={styles.buttonText}>isCategoryAccepted(1)</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("isVendorAccepted(1) = " + await TCConsentAPI.isVendorAccepted(1))}>
+          <Text style={styles.buttonText}>isVendorAccepted(1)</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("isIABPurposeAccepted(1) = " + await TCConsentAPI.isIABPurposeAccepted(1))}>
+          <Text style={styles.buttonText}>isIABPurposeAccepted(1)</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("isIABVendorAccepted(241) = " + await TCConsentAPI.isIABVendorAccepted(241))}>
+          <Text style={styles.buttonText}>isIABVendorAccepted(241)</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("isIABSpecialFeatureAccepted(1) = " + await TCConsentAPI.isIABSpecialFeatureAccepted(1))}>
+          <Text style={styles.buttonText}>isIABSpecialFeatureAccepted()</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("getAcceptedCategories() = " + await TCConsentAPI.getAcceptedCategories())}>
+          <Text style={styles.buttonText}>getAcceptedCategories()</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("getAcceptedVendors() = " + await TCConsentAPI.getAcceptedVendors())}>
+          <Text style={styles.buttonText}>getAcceptedVendors()</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("getAcceptedGoogleVendors() = " + await TCConsentAPI.getAcceptedGoogleVendors())}>
+          <Text style={styles.buttonText}>getAcceptedGoogleVendors()</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("getAllAcceptedConsent() = " + await TCConsentAPI.getAllAcceptedConsent())}>
+          <Text style={styles.buttonText}>getAllAcceptedConsent()</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.consentAPIButton}
+          onPress={async () => console.log("shouldDisplayPrivacyCenter() = " + await TCConsentAPI.shouldDisplayPrivacyCenter())}>
+          <Text style={styles.buttonText}>shouldDisplayPrivacyCenter()</Text>
+        </TouchableOpacity>
+
       </View>
       </ScrollView>
 
@@ -166,6 +253,13 @@ const styles = StyleSheet.create({
   },
   consentButton: {
     backgroundColor: 'purple',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginVertical: 10,
+  },  
+  consentAPIButton: {
+    backgroundColor: 'red',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,

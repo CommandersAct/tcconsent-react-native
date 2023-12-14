@@ -1,8 +1,6 @@
 import { NativeModules, Platform, NativeEventEmitter } from 'react-native';
 import { TCUserInstance } from 'tccore-react-native'; 
 
-
-
 const LINKING_ERROR =
   `The package 'tcconsent-react-native' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
@@ -157,6 +155,59 @@ export async function setLanguage(languageCode: string)
 export async function statViewPrivacyPoliciesFromBanner() 
 {
     return TCConsentBridge.statViewPrivacyPoliciesFromBanner();
+}
+
+/**
+ * fetches TCConsent.consentVersion on the device. 
+ * 
+ * @returns a Promise for the consentVersion native value. 
+ */
+export async function getConsentVersion(): Promise<string>
+{
+    return TCConsentBridge.getConsentVersion();
+}
+
+/**
+ * set consentVersion manually for your privacy hits. 
+ * 
+ * @param consentVersion string value. 
+ */
+export async function setConsentVersion(consentVersion: string)
+{
+    TCConsentBridge.setConsentVersion(consentVersion);
+}
+
+/**
+ * set TCConsent.do_not_track value for your privacy hits. 
+ * 
+ * @param value boolean value.
+ */
+export async function do_not_track(value: boolean) 
+{
+    TCConsentBridge.do_not_track(value);
+}
+
+/**
+ * Android OS only ! disable the back button on your privacy center.
+ * 
+ * @param value boolean value, true for enabled button, false for disabled.
+ */
+export async function deactivateBackButton(value: boolean)
+{
+    if (Platform.OS === 'android')
+    {
+        TCConsentBridge.deactivateBackButton(value)
+    }
+}
+
+/**
+ * Sets the consent switches state first time privacy center is shown. 
+ * 
+ * @param value boolean value, true for enabled switch per default, false for disabled.
+ */
+export async function switchDefaultState(value: boolean)
+{
+    TCConsentBridge.switchDefaultState(value)
 }
 
 function refreshTCUser(userScheme: any)
