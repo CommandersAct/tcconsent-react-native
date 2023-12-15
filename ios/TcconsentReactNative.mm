@@ -23,6 +23,22 @@ RCT_EXTERN_METHOD(resetSavedConsent)
 RCT_EXTERN_METHOD(setLanguage: (NSString *) languageCode)
 RCT_EXTERN_METHOD(statViewPrivacyPoliciesFromBanner)
 
+RCT_EXTERN_METHOD(isConsentAlreadyGiven: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(isCategoryAccepted: (double) ID withResolver: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(isVendorAccepted: (double) ID withResolver: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(isIABPurposeAccepted: (double) ID withResolver: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(isIABVendorAccepted: (double) ID withResolver: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(isIABSpecialFeatureAccepted: (double) ID withResolver: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(getAcceptedCategories: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(getAcceptedVendors: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(getAcceptedGoogleVendors: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(getAllAcceptedConsent: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(shouldDisplayPrivacyCenter: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(switchDefaultState: (BOOL) value)
+RCT_EXTERN_METHOD(do_not_track: (BOOL) value)
+RCT_EXTERN_METHOD(setConsentVersion: (NSString *) value)
+RCT_EXTERN_METHOD(getConsentVersion: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+
 + (BOOL)requiresMainQueueSetup
 {
   return NO;

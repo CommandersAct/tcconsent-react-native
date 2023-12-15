@@ -8,7 +8,7 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     @objc(setSiteIDPrivacyID:privacyID:)
     func setSiteIDPrivacyID(siteID: Double, privacyID: Double) -> Void
     {
-        TCDebug.setDebugLevel(TCLogLevel_Info)
+        TCDebug.setDebugLevel(TCLogLevel_Assert)
         TCMobileConsent.sharedInstance().registerCallback(self)
         TCMobileConsent.sharedInstance().setSiteID(Int32(siteID), andPrivacyID: Int32(privacyID))
         refreshTCUser()
@@ -134,6 +134,96 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     func statViewPrivacyPoliciesFromBanner()
     {
         TCMobileConsent.sharedInstance().statViewPrivacyPoliciesFromBanner()
+    }
+    
+    @objc(isConsentAlreadyGiven:withRejecter:)
+    func isConsentAlreadyGiven(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.isConsentAlreadyGiven())
+    }
+    
+    @objc(isCategoryAccepted:withResolver:withRejecter:)
+    func isCategoryAccepted(id: Double, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.isCategoryAccepted(Int32(id)))
+    }
+    
+    @objc(isVendorAccepted:withResolver:withRejecter:)
+    func isVendorAccepted(id: Double, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.isVendorAccepted(Int32(id)))
+    }
+
+    @objc(isIABPurposeAccepted:withResolver:withRejecter:)
+    func isIABPurposeAccepted(id: Double, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.isIABPurposeAccepted(Int32(id)))
+    }
+    
+    @objc(isIABVendorAccepted:withResolver:withRejecter:)
+    func isIABVendorAccepted(id: Double, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.isIABVendorAccepted(Int32(id)))
+    }
+    
+    @objc(isIABSpecialFeatureAccepted:withResolver:withRejecter:)
+    func isIABSpecialFeatureAccepted(id: Double, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.isIABSpecialFeatureAccepted(Int32(id)))
+    }
+    
+    @objc(getAcceptedCategories:withRejecter:)
+    func getAcceptedCategories(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.getAcceptedCategories())
+    }
+    
+    @objc(getAcceptedVendors:withRejecter:)
+    func getAcceptedVendors(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.getAcceptedVendors())
+    }
+    
+    @objc(getAcceptedGoogleVendors:withRejecter:)
+    func getAcceptedGoogleVendors(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.getAcceptedGoogleVendors())
+    }
+    
+    @objc(getAllAcceptedConsent:withRejecter:)
+    func getAllAcceptedConsent(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.getAllAcceptedConsent())
+    }
+    
+    @objc(shouldDisplayPrivacyCenter:withRejecter:)
+    func shouldDisplayPrivacyCenter(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.shouldDisplayPrivacyCenter())
+    }
+    
+    @objc(switchDefaultState:withRejecter:)
+    func switchDefaultState(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCConsentAPI.shouldDisplayPrivacyCenter())
+    }
+    
+    @objc(do_not_track:)
+    func do_not_track(value: Bool)
+    {
+        TCMobileConsent.sharedInstance().do_not_track = true
+    }
+    
+    @objc(setConsentVersion:)
+    func setConsentVersion(consentVersion: String)
+    {
+        TCMobileConsent.sharedInstance().consentVersion = consentVersion
+    }
+    
+    @objc(getConsentVersion:withRejecter:)
+    func getConsentVersion(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(TCMobileConsent.sharedInstance().consentVersion)
     }
     
     func evaluateConsentSource(stringSource: String) -> ETCConsentSource
