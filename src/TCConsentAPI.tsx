@@ -98,7 +98,6 @@ export class TCConsentAPI
         return TCConsentBridge.getAcceptedVendors();
     }
 
-
     /**
      * Get the list of all accepted vendors.
      *
