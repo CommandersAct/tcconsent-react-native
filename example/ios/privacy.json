@@ -1,155 +1,246 @@
 {
-  "information": {
-    "update": "2023-09-05",
-    "version": "003",
-    "vendors": "50,39,264,272,793,23,12,285,416,755,755,755,278,79,184,915,71,21,32,25,790,156,284",
-    "google_vendors": "2687,2695,2830",
-    "consentDurationInMonths": 6,
-    "significantChanges": "",
-    "resetSave": ""
-  },
-  "components": {
-    "firstLayerButton": [
-      "Detail",
-      "AcceptAll",
-      "RefuseAll"
+    "information": {
+        "update": "2023-11-29",
+        "version": "22",
+        "consentDurationInMonths": 6,
+        "SignificantChanges": "",
+        "resetSave": ""
+    },
+
+    "components": {
+        "firstLayerButton": [
+            "Save"
+        ],
+
+        "secondLayerButton": [
+            "Save"
+        ]
+    },
+    "customisation": {
+        "content": {
+            "fontcolor": "#000000",
+            "backgroundcolor": "#ffffff",
+            "bordercolor": "#ffffff"
+        },
+
+        "button": {
+            "fontcolor": "#ffffff",
+            "backgroundcolor": "#000000",
+            "disabledBackground": "#000000",
+            "linkcolor": "#000000"
+        }
+    },
+
+    "texts": {
+        "generic": {
+            "saveButton": "SAUVEGARDER",
+            "detailButton": "Details",
+            "acceptAllButton": "TOUT ACCEPTER",
+            "refuseAllButton": "TOUT REFUSER",
+            "vendorButton": "PARTENAIRES",
+            "purposeButton": "Afficher les catégories",
+            "legalButton": "Legals",
+            "backButton": "Retour",
+            "purposeDef": "Catégories",
+            "consentDef": "J'accepte",
+            "legIntPurposeDef": "",
+            "flexiblePurposeDef": "",
+            "specialPurposeDef": "",
+            "featureDef": "",
+            "specialFeatureDef": "",
+            "partnersLinkText": "NOS PARTENAIRES",
+            "relatedVendorsButton": "Voir les partenaires associés",
+            "month": "",
+            "day": "",
+            "seconds": "",
+            "hours": ""
+        },
+
+        "popup": {
+            "title": "",
+            "content": "",
+            "purposeTitle": "",
+            "specialPurposeTitle": "",
+            "featureTitle": "",
+            "specialFeatureTitle": ""
+        },
+
+        "purposes": {
+            "title": "Vos Paramètres",
+            "content": "Afin de vous offrir une expérience d’achat en ligne optimale, SEPHORA et ses partenaires utilisent des cookies et autres traceurs. Ces informations peuvent porter sur vous, vos préférences ou votre appareil. Elles nous permettent d'assurer le bon fonctionnement du site, et de vous fournir une expérience personnalisée. Consultez les différentes catégories ci-dessous pour obtenir plus de détails et modifier les paramètres par défaut. Vous pouvez à tout moment choisir de retirer votre consentement. Pour plus d'informations, consultez sur ce site notre politique données personnelles et cookies.",
+            "privacy_policy_text": "",
+            "privacy_policy_url": "https://www.sephora.fr/donnees-personnelles.html"
+        },
+
+        "vendors": {
+            "title": "Nos partenaires",
+            "content": "Voici la liste de nos partenaires",
+            "privacyPolicyText": "Privacy Policy"
+        },
+
+        "others": {
+            "title_purpose": "",
+            "title_vendors": ""
+        }
+    },
+
+    "texts_fr": {
+        "generic": {
+            "saveButton": "SAUVEGARDER",
+            "detailButton": "Details",
+            "acceptAllButton": "TOUT ACCEPTER",
+            "refuseAllButton": "TOUT REFUSER",
+            "vendorButton": "PARTENAIRES",
+            "purposeButton": "Afficher les catégories",
+            "legalButton": "Legals",
+            "backButton": "Retour",
+            "purposeDef": "Catégories",
+            "consentDef": "J'accepte",
+            "legIntPurposeDef": "",
+            "flexiblePurposeDef": "",
+            "specialPurposeDef": "",
+            "featureDef": "",
+            "specialFeatureDef": "",
+            "partnersLinkText": "NOS PARTENAIRES",
+            "relatedVendorsButton": "Voir les partenaires associés",
+            "month": "",
+            "day": "",
+            "seconds": "",
+            "hours": ""
+        },
+        "popup": {
+            "title": "",
+            "content": "",
+            "purposeTitle": "",
+            "specialPurposeTitle": "",
+            "featureTitle": "",
+            "specialFeatureTitle": ""
+        },
+        "purposes": {
+            "title": "Vos Paramètres",
+            "content": "Afin de vous offrir une expérience d’achat en ligne optimale, SEPHORA et ses partenaires utilisent des cookies et autres traceurs. Ces informations peuvent porter sur vous, vos préférences ou votre appareil. Elles nous permettent d'assurer le bon fonctionnement du site, et de vous fournir une expérience personnalisée. Consultez les différentes catégories ci-dessous pour obtenir plus de détails et modifier les paramètres par défaut. Vous pouvez à tout moment choisir de retirer votre consentement. Pour plus d'informations, consultez sur ce site notre politique données personnelles et cookies.",
+            "privacy_policy_text": "",
+            "privacy_policy_url": "https://www.sephora.fr/donnees-personnelles.html"
+        },
+        "vendors": {
+            "title": "Nos partenaires",
+            "content": "Voici la liste de nos partenaires",
+            "privacyPolicyText": "Privacy Policy"
+        },
+        "others": {
+            "title_purpose": "",
+            "title_vendors": ""
+        }
+    },
+    "categories": [{
+            "name": "Cookies techniques",
+            "ID": "1",
+            "isMandatory": "true",
+            "description": "Ces cookies sont nécessaires pour assurer le fonctionnement optimal du site et ne peuvent être désactivés. Ils vous permettent d'accéder aux différentes catégories, produits et services du site et nous aident à protéger notre site."
+        },
+        {
+            "name": "Cookies de Personnalisation",
+            "ID": "2",
+            "related_vendors": [
+                2, 6
+            ],
+            "description": "Ces cookies nous permettent de vous recommander des produits, des services et des contenus qui répondent au mieux à vos préférences, et de vous proposer certaines offres promotionnelles. En acceptant ces cookies, vous bénéficiez d’une expérience enrichie et personnalisée."
+        },
+        {
+            "name": "Cookies réseaux sociaux, publicité et mesure d’audience",
+            "ID": "3",
+            "related_vendors": [
+                4, 8, 16
+            ],
+            "description": "Ces cookies sont utilisés pour que nos publicités qui apparaissent sur des sites tiers, y compris sur les réseaux sociaux, soient adaptées à vos préférences, sur la base des pages que vous avez consultées, de votre navigation, et de l'historique de vos interactions. Ils nous permettent également de mesurer l’efficacité de nos campagnes."
+        }
     ],
-    "secondLayerButton": [
-      "Save",
-      "AcceptAll",
-      "RefuseAll"
+
+    "vendors": [{
+            "name": "Batch",
+            "ID": "2",
+            "description": "Personnalisation de l'experience utilisateur. Batch permet à Sephora d'envoyer des notifications push pour informer sur les lancements de produits, les promotions, etc. aux détenteurs d'applications qui ont accepté les push.",
+            "privacy_policy": "https://batch.com/privacy-policy"
+        },
+        {
+            "name": "Appsflyer",
+            "ID": "4",
+            "description": "Ce cookie nous permet de mesurer le volume de téléchargement/désinstallation de l‘application Sephora selon les différentes sources de téléchargement possibles.",
+            "privacy_policy": "https://www.appsflyer.com/legal/privacy-policy/"
+        },
+        {
+            "name": "Content Square",
+            "ID": "6",
+            "description": "Content Square développe et fournit des services d'analyse de l'expérience client. Cela permet de voir les interactions des visiteurs avec l'appplication sephora dans le but d'améliorer la connaissance et l'expérience du client.",
+            "privacy_policy": "https://contentsquare.com/privacy-center/privacy-policy/"
+        },
+        {
+            "name": "Firebase",
+            "ID": "8",
+            "description": "Firebase est une plate-forme de développement d'applications qui nous aide à créer, développer et monitorer notre application notamment à travers des rapports nous permettant de comprendre l’utilisation de notre application",
+            "privacy_policy": "https://firebase.google.com/support/privacy"
+        },
+        {
+            "name": "Piano Analytics",
+            "ID": "16",
+            "description": "AT Internet utilise des traceurs pour collecter des informations liées à votre activité sur notre app Sephora. Ces informations comprenant notamment la fréquentation de l'app, le nombre d'écrans vus, le temps moyen par visite, etc, nous permettent de mesurer et analyser l’audience de l'app Sephora et ainsi améliorer les fonctionnalités et le contenu de notre app.",
+            "privacy_policy": "https://developers.atinternet-solutions.com/piano-analytics/data-collection/how-to-send-events/privacy"
+        }
+    ],
+
+    "categories_fr": [{
+            "name": "Cookies techniques",
+            "ID": "1",
+            "isMandatory": "true",
+            "description": "Ces cookies sont nécessaires pour assurer le fonctionnement optimal du site et ne peuvent être désactivés. Ils vous permettent d'accéder aux différentes catégories, produits et services du site et nous aident à protéger notre site."
+        },
+        {
+            "name": "Cookies de Personnalisation",
+            "ID": "2",
+            "related_vendors": [
+                2, 6
+            ],
+            "description": "Ces cookies nous permettent de vous recommander des produits, des services et des contenus qui répondent au mieux à vos préférences, et de vous proposer certaines offres promotionnelles. En acceptant ces cookies, vous bénéficiez d’une expérience enrichie et personnalisée."
+        },
+        {
+            "name": "Cookies réseaux sociaux, publicité et mesure d’audience",
+            "ID": "3",
+            "related_vendors": [
+                4, 8, 16
+            ],
+            "description": "Ces cookies sont utilisés pour que nos publicités qui apparaissent sur des sites tiers, y compris sur les réseaux sociaux, soient adaptées à vos préférences, sur la base des pages que vous avez consultées, de votre navigation, et de l'historique de vos interactions. Ils nous permettent également de mesurer l’efficacité de nos campagnes."
+        }
+    ],
+
+    "vendors_fr": [{
+            "name": "Batch",
+            "ID": "2",
+            "description": "Personnalisation de l'experience utilisateur. Batch permet à Sephora d'envoyer des notifications push pour informer sur les lancements de produits, les promotions, etc. aux détenteurs d'applications qui ont accepté les push.",
+            "privacy_policy": "https://batch.com/privacy-policy"
+        },
+        {
+            "name": "Appsflyer",
+            "ID": "4",
+            "description": "Ce cookie nous permet de mesurer le volume de téléchargement/désinstallation de l‘application Sephora selon les différentes sources de téléchargement possibles.",
+            "privacy_policy": "https://www.appsflyer.com/legal/privacy-policy/"
+        },
+        {
+            "name": "Content Square",
+            "ID": "6",
+            "description": "Content Square développe et fournit des services d'analyse de l'expérience client. Cela permet de voir les interactions des visiteurs avec l'appplication sephora dans le but d'améliorer la connaissance et l'expérience du client.",
+            "privacy_policy": "https://contentsquare.com/privacy-center/privacy-policy/"
+        },
+        {
+            "name": "Firebase",
+            "ID": "8",
+            "description": "Firebase est une plate-forme de développement d'applications qui nous aide à créer, développer et monitorer notre application notamment à travers des rapports nous permettant de comprendre l’utilisation de notre application",
+            "privacy_policy": "https://firebase.google.com/support/privacy"
+        },
+        {
+            "name": "Piano Analytics",
+            "ID": "16",
+            "description": "AT Internet utilise des traceurs pour collecter des informations liées à votre activité sur notre app Sephora. Ces informations comprenant notamment la fréquentation de l'app, le nombre d'écrans vus, le temps moyen par visite, etc, nous permettent de mesurer et analyser l’audience de l'app Sephora et ainsi améliorer les fonctionnalités et le contenu de notre app.",
+            "privacy_policy": "https://developers.atinternet-solutions.com/piano-analytics/data-collection/how-to-send-events/privacy"
+        }
     ]
-  },
-  "customisation": {
-    "content": {
-      "fontcolor": "#111215",
-      "backgroundcolor": "#FFFFFF",
-      "bordercolor": "#414142"
-    },
-    "button": {
-      "fontcolor": "#ffffff",
-      "backgroundcolor": "#0A78E3",
-      "disabledBackground": "#aeb5bb",
-      "linkcolor": "#0A78E3"
-    },
-    "order": [
-      "IAB"
-    ]
-  },
-  "texts_fr": {
-    "generic": {
-      "illustationsButton": "illustrations",
-      "dataCategoriesDef": "Categories de Data",
-      "saveButton": "Valider",
-      "detailButton": "Détails",
-      "acceptAllButton": "Tout Accepter",
-      "refuseAllButton": "Tout Refuser",
-      "vendorButton": "Afficher les tiers",
-      "purposeButton": "Afficher les finalités",
-      "legalButton": "Informations légales",
-      "backButton": "Retour",
-      "purposeDef": "Finalités",
-      "consentDef": "Consentement",
-      "legIntPurposeDef": "Intérêt légitime",
-      "flexiblePurposeDef": "Finalités flexibles",
-      "specialPurposeDef": "Finalités spéciales",
-      "featureDef": "Fonctionnalités",
-      "specialFeatureDef": "Fonctionnalités spéciales",
-      "partnersLinkText": "Les tiers de la publicité",
-      "relatedVendorsButton": "Voir les tiers associés",
-      "month": "mois",
-      "day": "jours",
-      "seconds": "secondes",
-      "hours": "heures"
-    },
-    "popup": {
-      "title": "Paramétrez vos choix",
-      "content": "Pour chacune des finalités, finalités spéciales, fonctionnalités et fonctionnalités spéciales, vous pouvez contrôler l'activation (consentement) ou la désactivation (refus / retrait du consentement ou opposition à l’intérêt légitime) des traceurs et la création des profils. La position et du curseur indique si l’usage des traceurs et la création de profils sont autorisés (à gauche) ou refusés (à droite). Les SDK à des fins techniques (ex. authentification, sécurité, CMP...) sont indispensables au bon fonctionnement de nos services et ne peuvent être désactivés. Certains de nos partenaires peuvent traiter les données sur la base de l’intérêt légitime et vous pouvez vous y opposer en positionnant le curseur à gauche. Vos choix ne seront valides que sur l'appareil que vous utilisez actuellement.\n",
-      "purposeTitle": "",
-      "specialPurposeTitle": "",
-      "featureTitle": "",
-      "specialFeatureTitle": ""
-    },
-    "purposes": {
-      "title": "Paramétrez vos choix",
-      "content": "",
-      "privacy_policy_text": "",
-      "privacy_policy_url": ""
-    },
-    "vendors": {
-      "title": "Paramétrez vos choix",
-      "content": "",
-      "privacyPolicyText": "Politique de confidentialité",
-      "deviceStorageTitle": "Type de stockage:",
-      "deviceStorageCookieLifetime": "Durée du cookie: ",
-      "deviceStorageOther": "Autres",
-      "deviceStorageCookies": "Cookies",
-      "googleVendorsDef": "Partenaires Google Ad Technology",
-      "domainsDef": "liste des domaines utilisés",
-      "IABVendorsDef": "liste des partenaires IAB",
-      "legIntClaimTitle": "Politique de legitimate"
-    },
-    "others": {
-      "title_purpose": "Autres usages",
-      "title_vendors": "Autres solutions"
-    }
-  },
-  "texts": {
-    "generic": {
-      "illustationsButton": "illustrations",
-      "dataCategoriesDef": "Categories de Data",
-      "saveButton": "Valider",
-      "detailButton": "Détails",
-      "acceptAllButton": "Tout Accepter",
-      "refuseAllButton": "Tout Refuser",
-      "vendorButton": "Afficher les tiers",
-      "purposeButton": "Afficher les finalités",
-      "legalButton": "Informations légales",
-      "backButton": "Retour",
-      "purposeDef": "Finalités",
-      "consentDef": "Consentement",
-      "legIntPurposeDef": "Intérêt légitime",
-      "flexiblePurposeDef": "Finalités flexibles",
-      "specialPurposeDef": "Finalités spéciales",
-      "featureDef": "Fonctionnalités",
-      "specialFeatureDef": "Fonctionnalités spéciales",
-      "partnersLinkText": "Les tiers de la publicité",
-      "relatedVendorsButton": "Voir les tiers associés",
-      "month": "mois",
-      "day": "jours",
-      "seconds": "secondes",
-      "hours": "heures"
-    },
-    "popup": {
-      "title": "Paramétrez vos choix",
-      "content": "Pour chacune des finalités, finalités spéciales, fonctionnalités et fonctionnalités spéciales, vous pouvez contrôler l'activation (consentement) ou la désactivation (refus / retrait du consentement ou opposition à l’intérêt légitime) des traceurs et la création des profils. La position et du curseur indique si l’usage des traceurs et la création de profils sont autorisés (à gauche) ou refusés (à droite). Les SDK à des fins techniques (ex. authentification, sécurité, CMP...) sont indispensables au bon fonctionnement de nos services et ne peuvent être désactivés. Certains de nos partenaires peuvent traiter les données sur la base de l’intérêt légitime et vous pouvez vous y opposer en positionnant le curseur à gauche. Vos choix ne seront valides que sur l'appareil que vous utilisez actuellement.\n",
-      "purposeTitle": "",
-      "specialPurposeTitle": "",
-      "featureTitle": "",
-      "specialFeatureTitle": ""
-    },
-    "purposes": {
-      "title": "Paramétrez vos choix",
-      "content": "",
-      "privacy_policy_text": "",
-      "privacy_policy_url": ""
-    },
-    "vendors": {
-      "title": "Paramétrez vos choix",
-      "content": "",
-      "privacyPolicyText": "Politique de confidentialité",
-      "deviceStorageTitle": "Type de stockage:",
-      "deviceStorageCookieLifetime": "Durée du cookie: ",
-      "deviceStorageOther": "Autres",
-      "deviceStorageCookies": "Cookies",
-      "googleVendorsDef": "Partenaires Google Ad Technology",
-      "domainsDef": "liste des domaines utilisés",
-      "IABVendorsDef": "Solutions IAB",
-      "legIntClaimTitle": "Politique de legitimate"
-    },
-    "others": {
-      "title_purpose": "Autres usages",
-      "title_vendors": "Autres solutions"
-    }
-  }
 }

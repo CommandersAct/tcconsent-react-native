@@ -389,24 +389,21 @@ PODS:
     - React-logger (= 0.72.6)
     - React-perflogger (= 0.72.6)
   - SocketRocket (0.6.1)
-  - tcconsent-react-native (1.0.0):
+  - TCConsent (5.1.9)
+  - tcconsent-react-native (1.2.1):
     - IOSV5-TCCore (= 5.3.1)
     - React-Core
-    - TCConsent_IAB (= 5.1.9)
-    - TCIAB (= 5.0.1)
-  - tcconsent-react-native-swift (1.0.0):
+    - TCConsent (= 5.1.9)
+  - tcconsent-react-native-swift (1.2.1):
     - IOSV5-TCCore (= 5.3.1)
+    - TCConsent (= 5.1.9)
     - tcconsent-react-native
-    - TCConsent_IAB (= 5.1.9)
-    - TCIAB (= 5.0.1)
-  - TCConsent_IAB (5.1.9)
-  - tccore-react-native (0.1.2):
+  - tccore-react-native (1.0.1):
     - IOSV5-TCCore (= 5.3.1)
     - React-Core
-  - tccore-react-native-swift (1.0.0):
+  - tccore-react-native-swift (1.0.1):
     - IOSV5-TCCore (= 5.3.1)
     - tccore-react-native
-  - TCIAB (5.0.1)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -459,8 +456,7 @@ SPEC REPOS:
     - fmt
     - IOSV5-TCCore
     - SocketRocket
-    - TCConsent_IAB
-    - TCIAB
+    - TCConsent
 
 EXTERNAL SOURCES:
   boost:
@@ -589,12 +585,11 @@ SPEC CHECKSUMS:
   React-utils: 1dc03e6e55f56388b6fdde3768a66c885bacb627
   ReactCommon: 6044a8a504865d312c1bff6d3ee0a500f7f32987
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  tcconsent-react-native: 09f8822e06bd349c9ee1d825d192e89c69501ef2
-  tcconsent-react-native-swift: e429208e1c90adde9d98f0eba617171fe3ba2617
-  TCConsent_IAB: 110677490d01bcf9ae0695ddb953bfc065bae288
-  tccore-react-native: 857c4dcdbe7fa9ab0f9dee47d67334ee09cc041e
-  tccore-react-native-swift: 452f4aa4573d8cc69606061389d24ee4649e272e
-  TCIAB: f0243220c47922012cdc122818773e09c8f5f21d
+  TCConsent: 695f30b7c68b0a1c4f28110e7eb081be537da7c8
+  tcconsent-react-native: 9aa603b1c4dc8e863ba4523f9e63249d5a2fb8db
+  tcconsent-react-native-swift: 24a7917061b03e7e245a21944f4f8f94027a37b2
+  tccore-react-native: e75935e674cd2a3ef8dea98b8d55b971fed537b6
+  tccore-react-native-swift: c65df7d9ac991513b68042a9a385f5e7064bb51c
   Yoga: b76f1acfda8212aa16b7e26bcce3983230c82603
 
 PODFILE CHECKSUM: 4bbd7cf04373bb24570ca8dcbe8e56d2f7d32b53

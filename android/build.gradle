@@ -84,6 +84,5 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "com.tagcommander.lib:core:5.4.1"
   implementation "com.tagcommander.lib:Consent:5.2.7"
-  implementation "com.tagcommander.lib:TCIAB:5.0.0"
 }
 

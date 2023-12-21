@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
 
   s.dependency 'React-Core'
   s.dependency 'IOSV5-TCCore', '5.3.1'
-  s.dependency 'TCConsent_IAB', '5.1.9'
-  s.dependency 'TCIAB', '5.0.1'
+  s.dependency 'TCConsent', '5.1.9'
 
 end
