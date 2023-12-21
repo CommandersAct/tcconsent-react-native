@@ -76,16 +76,16 @@ export function useACString(useACString: boolean)
     TCConsentBridge.useACString(useACString);
 }
 
-/**
- * Initialise your TCConsent module without CommandersAct's Privacy Center, If you're using your own.
- * 
- * @param siteId 
- * @param privacyID 
- */
-export function customPCMSetSiteID(siteId: number, privacyID: number)
-{
-    TCConsentBridge.customPCMSetSiteID(siteId, privacyID);
-}
+// /**
+//  * Initialise your TCConsent module without CommandersAct's Privacy Center, If you're using your own.
+//  * 
+//  * @param siteId 
+//  * @param privacyID 
+//  */
+// export function customPCMSetSiteID(siteId: number, privacyID: number)
+// {
+//     TCConsentBridge.customPCMSetSiteID(siteId, privacyID);
+// }
 
 export function setConsentDuration(months: number)
 {
@@ -97,17 +97,47 @@ export function useCustomPublisherRestrictions()
     TCConsentBridge.useCustomPublisherRestrictions();
 }
 
-export function saveConsentFromPopUp(consent: Map<String, String>)
+/**
+ * Only when consent is from PopUp.
+ * 
+ * The entry point to call when you user answered about the consent.
+ * This will also send a hit to save the consent in our databases
+ * <p>
+ * If the consent map is null, we take this as a full refusal.
+ *
+ * @param consent the consent categories opted-in/out
+ */
+export function saveConsentFromPopUp(consent: { [key: string]: string })
 {
     TCConsentBridge.saveConsentFromPopUp(consent);
 }
 
-export function saveConsent(consent: Map<String, String>)
+/**
+ *  * Only when consent is from Privacy Center.
+ * 
+ * The entry point to call when you user answered about the consent.
+ * This will also send a hit to save the consent in our databases
+ * <p>
+ * If the consent map is null, we take this as a full refusal.
+ *
+ * @param consent the consent categories opted-in/out
+ */
+export function saveConsent(consent: { [key: string]: string })
 {
     TCConsentBridge.saveConsent(consent);
 }
 
-export function saveConsentFromConsentSourceWithPrivacyAction(consent: Map<String, String>, source: ETCConsentSource, action: ETCConsentAction)
+/**
+ * Universal entry point to call when you user answered about the consent.
+ * This will also send a hit to save the consent in our databases
+ * <p>
+ * If the consent map is null, we take this as a full refusal.
+ * 
+ * @param consent the consent categories opted-in/out.
+ * @param source whether its from your privacy center or from popUp (banner).
+ * @param action which can be a refuse ALl, accept All, or a save depending on the user choice.
+ */
+export function saveConsentFromConsentSourceWithPrivacyAction(consent: { [key: string]: string }, source: ETCConsentSource, action: ETCConsentAction)
 {
     TCConsentBridge.saveConsentFromConsentSourceWithPrivacyAction(consent, source, action);
 }

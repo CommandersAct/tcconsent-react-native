@@ -10,13 +10,13 @@ async function initialiseTCConsent()
   await TCConsent.setSiteIDPrivacyID(3311, 2929)
 }
 
-let mockConsent = new Map([
-  ['PRIVACY_CAT_1', '1'],
-  ['PRIVACY_CAT_2', '1'],
-  ['PRIVACY_CAT_3', '0'],
-  ['PRIVACY_VEN_1', '0'],
-  ['PRIVACY_CAT_2', '1'],
-]);
+let mockConsent = {
+  'PRIVACY_CAT_1': '1',
+  'PRIVACY_CAT_2': '1',
+  'PRIVACY_CAT_3': '0   ',
+  'PRIVACY_VEN_1': '0',
+  'PRIVACY_VEN_2': '1'
+};
 
 
 const ButtonRow = () => {
