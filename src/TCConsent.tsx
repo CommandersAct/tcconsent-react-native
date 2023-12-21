@@ -76,16 +76,16 @@ export function useACString(useACString: boolean)
     TCConsentBridge.useACString(useACString);
 }
 
-// /**
-//  * Initialise your TCConsent module without CommandersAct's Privacy Center, If you're using your own.
-//  * 
-//  * @param siteId 
-//  * @param privacyID 
-//  */
-// export function customPCMSetSiteID(siteId: number, privacyID: number)
-// {
-//     TCConsentBridge.customPCMSetSiteID(siteId, privacyID);
-// }
+/**
+ * Initialise your TCConsent module without CommandersAct's Privacy Center, If you're using your own.
+ * 
+ * @param siteId 
+ * @param privacyID 
+ */
+export function customPCMSetSiteID(siteId: number, privacyID: number)
+{
+    TCConsentBridge.customPCMSetSiteID(siteId, privacyID);
+}
 
 export function setConsentDuration(months: number)
 {
