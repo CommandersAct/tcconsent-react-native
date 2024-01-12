@@ -80,14 +80,14 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@commanders-act/tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#scoped_package_name"
   },
   "resolutions": {
     "@types/react": "17.0.21"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*",
-    "@commanders-act/tccore-react-native": "1.2.0"
+    "react-native": "*"
   },
   "engines": {
     "node": ">= 16.0.0"
