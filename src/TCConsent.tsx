@@ -1,5 +1,5 @@
 import { NativeModules, Platform, NativeEventEmitter } from 'react-native';
-import { TCUserInstance } from '@commanders-act/tccore-react-native'; 
+import { TCUserInstance } from '@commandersact/tccore-react-native'; 
 
 const LINKING_ERROR =
   `The package 'tcconsent-react-native' doesn't seem to be linked. Make sure: \n\n` +
