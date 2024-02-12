@@ -277,7 +277,7 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     }
     else if (stringAction.equals("REFUSE_ALL"))
     {
-      return ETCConsentAction.AcceptAll;
+      return ETCConsentAction.RefuseAll;
     }
     else
     {
