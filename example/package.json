@@ -12,8 +12,8 @@
     "@types/react-native": "^0.72.2",
     "react": "18.2.0",
     "react-native": "^0.72.4",
-    "tcconsent-react-native": "../",
-    "tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#1.1.0"  
+    "@commandersact/tcconsent-react-native": "../",
+    "@commandersact/tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#1.2.0"  
 },
   "devDependencies": {
     "@babel/core": "^7.20.0",

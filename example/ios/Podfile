@@ -25,8 +25,8 @@ target 'TcconsentReactNativeExample' do
     end
   end
 
-  pod "tccore-react-native-swift", :path => '../node_modules/tccore-react-native/tccore-react-native-swift.podspec'
-  pod "tcconsent-react-native-swift", :path => '../node_modules/tcconsent-react-native/tcconsent-react-native-swift.podspec'
+  pod "tccore-react-native-swift", :path => '../node_modules/@commandersact/tccore-react-native/tccore-react-native-swift.podspec'
+  pod "tcconsent-react-native-swift", :path => '../node_modules/@commandersact/tcconsent-react-native/tcconsent-react-native-swift.podspec'
 
   use_react_native!(
     :path => config[:reactNativePath],

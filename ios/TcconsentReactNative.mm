@@ -38,6 +38,7 @@ RCT_EXTERN_METHOD(switchDefaultState: (BOOL) value)
 RCT_EXTERN_METHOD(do_not_track: (BOOL) value)
 RCT_EXTERN_METHOD(setConsentVersion: (NSString *) value)
 RCT_EXTERN_METHOD(getConsentVersion: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
+RCT_EXTERN_METHOD(getLastTimeConsentWasSaved: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
 
 + (BOOL)requiresMainQueueSetup
 {
