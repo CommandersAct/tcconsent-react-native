@@ -77,7 +77,8 @@
     "react-native-builder-bob": "^0.21.3",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "@commandersact/tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#1.2.0"
   },
   "dependencies": {
   },
