@@ -350,6 +350,12 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   }
 
   @ReactMethod
+  public void getLastTimeConsentWasSaved(Promise promise)
+  {
+    promise.resolve(TCConsentAPI.getLastTimeConsentWasSaved(getReactApplicationContext()).toString());
+  }
+
+  @ReactMethod
   public void isCategoryAccepted(Double ID, Promise promise)
   {
     promise.resolve(TCConsentAPI.isCategoryAccepted(ID.intValue(), getReactApplicationContext()));

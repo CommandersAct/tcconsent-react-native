@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, ScrollView} from 'react-native';
-import { TCUser } from 'tccore-react-native';
-import * as TCConsent from 'tcconsent-react-native';
-import { TCConsentAPI } from 'tcconsent-react-native';
-import {EPrivacyCenterStartScreen} from 'tcconsent-react-native';
+import { TCUser } from '@commandersact/tccore-react-native';
+import * as TCConsent from '@commandersact/tcconsent-react-native';
+import { TCConsentAPI } from '@commandersact/tcconsent-react-native';
+import {EPrivacyCenterStartScreen} from '@commandersact/tcconsent-react-native';
 
 async function initialiseTCConsent()
 {
@@ -89,6 +89,12 @@ const ButtonRow = () => {
           onPress={() => TCConsent.saveConsentFromConsentSourceWithPrivacyAction(mockConsent, TCConsent.ETCConsentSource.POP_UP, TCConsent.ETCConsentAction.SAVE)}>
           <Text style={styles.buttonText}>saveConsentFromConsentSourceWithPrivacyAction</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+           style={styles.consentButton}
+          onPress={printLastTimeConsentWasSaved}>
+           <Text style={styles.buttonText}>GetLastTimeConsentWasSaved</Text>
+         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.consentButton}
@@ -236,6 +242,11 @@ export default function App() {
 function printTCUser()
 {
   console.log(TCUser.getInstance())
+}
+
+async function printLastTimeConsentWasSaved()
+{
+  console.log(await TCConsent.TCConsentAPI.getLastTimeConsentWasSaved())
 }
 
 const styles = StyleSheet.create({

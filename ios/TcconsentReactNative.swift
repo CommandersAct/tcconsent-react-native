@@ -142,6 +142,12 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
         resolve(TCConsentAPI.isConsentAlreadyGiven())
     }
     
+    @objc(getLastTimeConsentWasSaved:withRejecter:)
+    func getLastTimeConsentWasSaved(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
+    {
+        resolve(String(TCConsentAPI.getLastTimeConsentWasSaved()))
+    }
+    
     @objc(isCategoryAccepted:withResolver:withRejecter:)
     func isCategoryAccepted(id: Double, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
     {
