@@ -20,8 +20,8 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
   s.dependency 'React-Core'
-  s.dependency 'IOSV5-TCCore', '5.3.4'
-  s.dependency 'TCConsent_IAB', '5.2.1'
-  s.dependency 'TCIAB', '5.0.2'
+  s.dependency 'IOSV5-TCCore', '5.4.0'
+  s.dependency 'TCConsent', '5.3.1'
+  s.dependency 'TCIAB', '5.1.0'
 
 end
