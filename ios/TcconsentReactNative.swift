@@ -1,5 +1,5 @@
 import React
-import TCConsent_IAB
+import TCConsent
 import TCCore
 
 @objc(TcconsentReactNative)
