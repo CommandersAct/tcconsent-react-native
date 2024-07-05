@@ -7,8 +7,8 @@ CommandersAct's TCConsent react native bridge
 add the following dependencies into your package.json 
 
 ```sh
-    "tcconsent-react-native": "git+https://github.com/commandersact/tcconsent-react-native#1.1.0", #check latest available version
-    "tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#1.1.0", #check latest available version
+    "tcconsent-react-native": "git+https://github.com/commandersact/tcconsent-react-native#*.*.*", #check latest available version
+    "tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#*.*.*", #check latest available version
 ```
 
 Depending on your use case, you may need one or multiple of these offline jsons in both of your android/iOS native app code. 
