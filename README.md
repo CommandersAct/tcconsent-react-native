@@ -19,25 +19,26 @@ Depending on your use case, you may need one or multiple of these offline jsons 
 - google-atp-list.json if you wanna use ACString. 
 
 
-For Android, it should be inside the assets folder of your main app module. 
-For iOS, make sure it is bundled with your app main bundle, Xcode target -> Build phases -> copy bundle ressources. 
+#### For Android : 
+
+Your should have all of your necessary json files inside the assets folder of your main app module. 
+
+#### For iOS : 
+
+Make sure all your necessary json files are bundled with your app main bundle.
+  Xcode target -> Build phases -> copy bundle ressources. 
 
 
 ## Usage
 
-This bridge ports the TCConsent SDK available on [Android](https://github.com/CommandersAct/androidV5/tree/master/TCConsent) and [iOS](https://github.com/CommandersAct/iOSV5/tree/master/TCConsent)
+Usage will highly depend on your usecase. It is highly recommanded to have a look on the native SDK documentation for more insights and details. [Android](https://github.com/CommandersAct/androidV5/tree/master/TCConsent) and [iOS](https://github.com/CommandersAct/iOSV5/tree/master/TCConsent). 
 
-It is highly recommanded to take a look on the native SDK documentation for more insights and details. 
-
-### Please check our [TDemoReactNative](https://github.com/CommandersAct/TCDemoReactNative) for a full demo app
-
-basic usage example : 
+The follwing is a code sample for some main methodes of the library : 
 
 ```js
 // imports ... 
 import * as TCConsent from 'tcconsent-react-native';
 // Initialisation ..
-
   TCConsent.setSiteIDPrivacyID(3311, 2929)
 // Show privacy center 
   TCConsent.showPrivacyCenter()
@@ -45,3 +46,20 @@ import * as TCConsent from 'tcconsent-react-native';
   TCConsent.acceptAllConsent()
 
 ```
+
+### Demo App 
+
+Check the following repo for a full working react-native app that integrates this library. 
+
+https://github.com/CommandersAct/TCDemoReactNative
+
+
+# Support & Contact : 
+
+Support : support@commandersact.com
+
+http://www.commandersact.com
+
+Commanders Act | 7b rue taylor - 75010 PARIS - France
+
+![Commanders Act logo](res/ca_logo.png)
