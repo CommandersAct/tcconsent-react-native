@@ -389,15 +389,15 @@ PODS:
     - React-logger (= 0.72.14)
     - React-perflogger (= 0.72.14)
   - SocketRocket (0.6.1)
-  - TCConsent (5.3.1)
-  - tcconsent-react-native (1.3.4):
+  - TCConsent (5.3.2)
+  - tcconsent-react-native (1.3.5):
     - IOSV5-TCCore (= 5.4.0)
     - React-Core
-    - TCConsent (= 5.3.1)
+    - TCConsent (= 5.3.2)
     - TCIAB (= 5.1.0)
-  - tcconsent-react-native-swift (1.3.4):
+  - tcconsent-react-native-swift (1.3.5):
     - IOSV5-TCCore (= 5.4.0)
-    - TCConsent (= 5.3.1)
+    - TCConsent (= 5.3.2)
     - tcconsent-react-native
     - TCIAB (= 5.1.0)
   - tccore-react-native (1.2.2):
@@ -589,9 +589,9 @@ SPEC CHECKSUMS:
   React-utils: e724eca54907846d399d0f599b0c120f9c58f5d5
   ReactCommon: 006d695c2acfadf49231e3760cc89337aa9bcb82
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  TCConsent: ec222b6afa9419c634198bb8f778cd6dbaf27aa9
-  tcconsent-react-native: 21a8b90d16a82fca8ae6e74b075d7d56ed44774f
-  tcconsent-react-native-swift: 8bfea382d90a6565d0fdcad3721b038e9b445631
+  TCConsent: 095b65ad42197786036c311f7fcdec279bd03a82
+  tcconsent-react-native: 6375f52ceacdc51523899e69c8cce863b7f26478
+  tcconsent-react-native-swift: 1a65b782b48a51abdef007b174ecdca0a3328485
   tccore-react-native: fff46fea4b28eced97207fd17ed7f912206d5800
   tccore-react-native-swift: 1434ae26d94777b464fce2859e13958d18df7493
   TCIAB: f584a93c1c8e38f1deb245cc3c3fef367e32a3cf
