@@ -82,8 +82,8 @@ dependencies {
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
   implementation 'com.facebook.react:react-native:+'
-  implementation 'com.tagcommander.lib:core:5.4.4'
-  implementation 'com.tagcommander.lib:Consent:5.3.2'
+  implementation 'com.tagcommander.lib:core:5.4.6'
+  implementation 'com.tagcommander.lib:Consent:5.3.4'
   implementation 'com.tagcommander.lib:TCIAB:5.0.0'
 }
 
