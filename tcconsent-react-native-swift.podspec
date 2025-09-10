@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
   s.dependency 'tcconsent-react-native'
-  s.dependency 'IOSV5-TCCore', '5.4.1'
-  s.dependency 'TCConsent', '5.3.5'
-  s.dependency 'TCIAB', '5.1.1'
+  s.dependency 'IOSV5-TCCore', '5.4.3'
+  s.dependency 'TCConsent', '5.3.7'
+  s.dependency 'TCIAB', '5.2.0'
 
 end
 
