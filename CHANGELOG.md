@@ -1,3 +1,7 @@
+## 1.3.10
+
+* tccore-react-native dependency updated.
+
 ## 1.3.9
 
 * Upgrade Android Core dependency to (5.4.9)[https://github.com/CommandersAct/AndroidV5/blob/master/TCCore/changelog_Android_Core.md]
