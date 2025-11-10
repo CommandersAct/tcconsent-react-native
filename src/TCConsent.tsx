@@ -26,66 +26,7 @@ eventEmitter.addListener('significantChangesInPrivacy', _ => {});
 eventEmitter.addListener('refreshTCUser', refreshTCUser);
 
 
-/**
- * Initialise your TCConsent module with your own siteID/privacyID values
- * 
- * @param siteId 
- * @param privacyID 
- */
-export async function setSiteIDPrivacyID(siteId: number, privacyID: number)
-{
-    await TCConsentBridge.setSiteIDPrivacyID(siteId, privacyID);
-}
 
-export function acceptAllConsent()
-{
-    TCConsentBridge.acceptAllConsent();
-}
-
-export function refuseAllConsent()
-{
-    TCConsentBridge.refuseAllConsent();
-}
-
-/**
- * Show the Privacy Center with the specified options.
- *
- * @param {EPrivacyCenterStartScreen} startScreen - The starting screen for the Privacy Center, could be kTCStartWithVendorScreen or kTCStartWithPurposeScreen.
- * @param {string | null} customAndroidTitle - Optional title value for your privacy center activity on android.
- * @returns {void}
- */
-export function showPrivacyCenter(startScreen: EPrivacyCenterStartScreen = EPrivacyCenterStartScreen.kTCStartWithDefault, customAndroidTitle:string | null = null)
-{
-    if (Platform.OS === 'ios')
-    {
-        TCConsentBridge.showPrivacyCenter(startScreen);
-    }
-    else if (Platform.OS === 'android')
-    {
-        TCConsentBridge.showPrivacyCenter(startScreen, customAndroidTitle);
-    }
-}
-
-/**
- * Enable google ACString usage [IAB Users only]
- * 
- * @param useACString boolean value.
- */
-export function useACString(useACString: boolean)
-{
-    TCConsentBridge.useACString(useACString);
-}
-
-// /**
-//  * Initialise your TCConsent module without CommandersAct's Privacy Center, If you're using your own.
-//  * 
-//  * @param siteId 
-//  * @param privacyID 
-//  */
-// export function customPCMSetSiteID(siteId: number, privacyID: number)
-// {
-//     TCConsentBridge.customPCMSetSiteID(siteId, privacyID);
-// }
 
 export function setConsentDuration(months: number)
 {
