@@ -1,3 +1,8 @@
+## 1.3.11
+
+* Upgrade Native android TCConsent library to (5.3.10)[https://github.com/CommandersAct/AndroidV5/blob/master/TCConsent/changelog_Android_Consent.md]
+* Fix missing function customPCMSetSiteID for non-IAB users.
+
 ## 1.3.10
 
 * tccore-react-native dependency updated.

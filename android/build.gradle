@@ -83,6 +83,6 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation 'com.facebook.react:react-native:+'
   implementation 'com.tagcommander.lib:core:5.4.9'
-  implementation 'com.tagcommander.lib:Consent:5.3.9'
+  implementation 'com.tagcommander.lib:Consent:5.3.10'
 }
 
