@@ -1,6 +1,7 @@
 ## 1.3.12
 
 * Android SDK unavailable APIs removed
+* Fixing undefined TCUser variables for non-IAB non-PrivacyCenter users.
 
 ## 1.3.11
 

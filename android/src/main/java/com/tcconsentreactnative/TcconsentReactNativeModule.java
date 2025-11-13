@@ -90,7 +90,9 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   @ReactMethod
   public void customPCMSetSiteID(double siteID, double privacyID)
   {
+    TCConsent.getInstance().registerCallback(this);
     TCConsent.getInstance().initWithCustomPCM((int) siteID, (int) privacyID, getReactApplicationContext());
+    refreshTCUser();
   }
 
   @ReactMethod
