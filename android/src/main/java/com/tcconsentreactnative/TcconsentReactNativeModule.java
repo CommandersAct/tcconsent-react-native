@@ -76,7 +76,6 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   public void showPrivacyCenter(String startScreen, String customTitle)
   {
     Intent PCM = new Intent(getReactApplicationContext(), TCPrivacyCenter.class);
-    setCustomTitle(PCM, customTitle);
     setStartScreen(PCM, startScreen);
     PCM.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     getReactApplicationContext().startActivity(PCM);
@@ -335,14 +334,6 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     }
   }
 
-  private void setCustomTitle(Intent pcm, String customTitle)
-  {
-    if (customTitle != null)
-    {
-      pcm.putExtra(TCConsentConstants.kTCIntentExtraCustomTitle, customTitle);
-    }
-  }
-
   @ReactMethod
   public void isConsentAlreadyGiven(Promise promise)
   {
@@ -415,11 +406,15 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     promise.resolve(TCConsentAPI.shouldDisplayPrivacyCenter(getReactApplicationContext()));
   }
 
+/**
+ * function not available for this version, needs native Android SDK changes
+ * 
   @ReactMethod
   public void switchDefaultState(boolean value)
   {
     TCConsent.getInstance().switchDefaultState = value;
   }
+**/
 
   @ReactMethod
   public void deactivateBackButton(boolean value)
@@ -427,11 +422,15 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     TCConsent.getInstance().deactivateBackButton = value;
   }
 
+/**
+ * function not available for this version, needs native Android SDK changes
+ * 
   @ReactMethod
   public void do_not_track(boolean value)
   {
     TCConsent.getInstance().do_not_track = value;
   }
+**/
 
   @ReactMethod
   public void setConsentVersion(String value)
