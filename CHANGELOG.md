@@ -1,3 +1,7 @@
+## 1.3.12
+
+* Android SDK unavailable APIs removed
+
 ## 1.3.11
 
 * Upgrade Native android TCConsent library to (5.3.10)[https://github.com/CommandersAct/AndroidV5/blob/master/TCConsent/changelog_Android_Consent.md]

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, ScrollView} from 'react-native';
-import { TCUser } from '@commandersact/tccore-react-native';
+import { TCUserInstance } from '@commandersact/tccore-react-native';
 import * as TCConsent from '@commandersact/tcconsent-react-native';
 import { TCConsentAPI } from '@commandersact/tcconsent-react-native';
 import {EPrivacyCenterStartScreen} from '@commandersact/tcconsent-react-native';
@@ -241,7 +241,7 @@ export default function App() {
 
 function printTCUser()
 {
-  console.log(TCUser.getInstance())
+  console.log(TCUserInstance.anonymous_id)
 }
 
 async function printLastTimeConsentWasSaved()
