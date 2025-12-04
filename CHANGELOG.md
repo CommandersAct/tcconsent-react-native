@@ -1,3 +1,7 @@
+## 1.3.13
+
+* Fixing JS TCConsent package
+
 ## 1.3.12
 
 * Android SDK unavailable APIs removed
