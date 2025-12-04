@@ -78,6 +78,30 @@ Check the following repo for a full working react-native app that integrates thi
 https://github.com/CommandersAct/TCDemoReactNative
 
 
+### 4. iOS Build Issues Fix Guide
+
+On iOS, library linking can be fragile and files may easily break or become corrupted. If you encounter strange dependency issues, _OBJ_CLASS_$__ errors, or “not found” build failures, try the following steps:
+
+1- Delete your node_modules folder
+
+2- Remove package-lock.json
+
+3- Close Xcode if it’s open
+
+4- Run npm install to reinstall dependencies
+
+5- Delete ios/Podfile.lock
+
+6- Remove the ios/Pods folder
+
+7- Ensure your Podfile is correctly configured—verify that required pods (e.g., pod "tccore-...") are properly declared
+
+8- Run pod install inside the ios/ directory
+
+
+8.1- In some cases, you may also need to open Xcode, clean the build folder, and run the app from the .xcworkspace file.
+
+
 # Support & Contact : 
 
 Support : support@commandersact.com
