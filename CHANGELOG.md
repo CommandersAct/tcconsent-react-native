@@ -1,3 +1,8 @@
+## 1.4.0
+
+* The library now works with Expo apps using expo prebuild or a custom development client
+* Expo Go / managed-only workflow is not supported (native code required)Ú  
+
 ## 1.3.13
 
 * Fixing JS TCConsent package
