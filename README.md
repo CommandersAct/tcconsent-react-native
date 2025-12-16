@@ -19,7 +19,7 @@ Once the JS packages installed, you'll need to manually add the required pods to
 
 ```
 pod "tccore-react-native-swift", :path => '../node_modules/@commandersact/tccore-react-native/tccore-react-native-swift.podspec'
-pod "tcconsent-react-native-swift", :path => '../node_modules/@commandersact/tcconsent-react-native/tcconsent-react-native-swift.podspec'
+pod "tcserverside-react-native-swift", :path => '../node_modules/@commandersact/tcserverside-react-native/tcserverside-react-native-swift.podspec'
 ```
 
 check the demo app podfile here : https://github.com/CommandersAct/TCDemoReactNative/blob/master/ios/Podfile
@@ -100,7 +100,6 @@ On iOS, library linking can be fragile and files may easily break or become corr
 
 
 8.1- In some cases, you may also need to open Xcode, clean the build folder, and run the app from the .xcworkspace file.
-
 
 # Support & Contact : 
 

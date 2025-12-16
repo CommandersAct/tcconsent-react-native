@@ -8,7 +8,7 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     @objc(setSiteIDPrivacyID:privacyID:)
     func setSiteIDPrivacyID(siteID: Double, privacyID: Double) -> Void
     {
-        TCDebug.setDebugLevel(TCLogLevel_Assert)
+        TCDebug.setDebugLevel(TCLogLevel_Verbose)
         TCMobileConsent.sharedInstance().registerCallback(self)
         TCMobileConsent.sharedInstance().setSiteID(Int32(siteID), andPrivacyID: Int32(privacyID))
         refreshTCUser()
@@ -47,7 +47,7 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     @objc(customPCMSetSiteID:privacyID:)
     func customPCMSetSiteID(siteID: Double, privacyID: Double) -> Void
     {
-        TCDebug.setDebugLevel(TCLogLevel_Assert)
+        TCDebug.setDebugLevel(TCLogLevel_Verbose)
         TCMobileConsent.sharedInstance().registerCallback(self)
         TCMobileConsent.sharedInstance().customPCMSetSiteID(Int32(siteID), andPrivacyID: Int32(privacyID))
         refreshTCUser()
