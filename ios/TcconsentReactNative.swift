@@ -211,11 +211,12 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
         resolve(TCConsentAPI.shouldDisplayPrivacyCenter())
     }
     
+/*
     @objc(switchDefaultState:withRejecter:)
     func switchDefaultState(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
     {
         resolve(TCConsentAPI.shouldDisplayPrivacyCenter())
-    }
+    }*/
     
     @objc(do_not_track:)
     func do_not_track(value: Bool)

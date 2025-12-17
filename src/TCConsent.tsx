@@ -225,11 +225,11 @@ export async function deactivateBackButton(value: boolean)
  * Sets the consent switches state first time privacy center is shown. 
  * 
  * @param value boolean value, true for enabled switch per default, false for disabled.
- */
+ 
 export async function switchDefaultState(value: boolean)
 {
     TCConsentBridge.switchDefaultState(value)
-}
+}*/
 
 function refreshTCUser(userScheme: any)
 {
