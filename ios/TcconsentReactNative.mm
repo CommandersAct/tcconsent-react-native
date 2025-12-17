@@ -34,7 +34,7 @@ RCT_EXTERN_METHOD(getAcceptedVendors: (RCTPromiseResolveBlock) resolve withRejec
 RCT_EXTERN_METHOD(getAcceptedGoogleVendors: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
 RCT_EXTERN_METHOD(getAllAcceptedConsent: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
 RCT_EXTERN_METHOD(shouldDisplayPrivacyCenter: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)
-RCT_EXTERN_METHOD(switchDefaultState: (BOOL) value)
+// RCT_EXTERN_METHOD(switchDefaultState: (BOOL) value)
 RCT_EXTERN_METHOD(do_not_track: (BOOL) value)
 RCT_EXTERN_METHOD(setConsentVersion: (NSString *) value)
 RCT_EXTERN_METHOD(getConsentVersion: (RCTPromiseResolveBlock) resolve withRejecter: (RCTPromiseRejectBlock) reject)

@@ -6,5 +6,5 @@ package com.tcconsentreactnative;
 
 public class TCConsentReactNativeGenerated
 {
-    public static final String version = "1.4.0";
+    public static final String version = "1.4.1";
 }
