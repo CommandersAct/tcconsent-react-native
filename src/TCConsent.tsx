@@ -88,50 +88,11 @@ export function useCustomPublisherRestrictions()
     TCConsentBridge.useCustomPublisherRestrictions();
 }
 
-/**
- * Only when consent is from PopUp.
- * 
- * The entry point to call when you user answered about the consent.
- * This will also send a hit to save the consent in our databases
- * <p>
- * If the consent map is null, we take this as a full refusal.
- *
- * @param consent the consent categories opted-in/out
- */
-export function saveConsentFromPopUp(consent: { [key: string]: string })
-{
-    TCConsentBridge.saveConsentFromPopUp(consent);
-}
 
-/**
- *  * Only when consent is from Privacy Center.
- * 
- * The entry point to call when you user answered about the consent.
- * This will also send a hit to save the consent in our databases
- * <p>
- * If the consent map is null, we take this as a full refusal.
- *
- * @param consent the consent categories opted-in/out
- */
-export function saveConsent(consent: { [key: string]: string })
-{
-    TCConsentBridge.saveConsent(consent);
-}
 
-/**
- * Universal entry point to call when you user answered about the consent.
- * This will also send a hit to save the consent in our databases
- * <p>
- * If the consent map is null, we take this as a full refusal.
- * 
- * @param consent the consent categories opted-in/out.
- * @param source whether its from your privacy center or from popUp (banner).
- * @param action which can be a refuse ALl, accept All, or a save depending on the user choice.
- */
-export function saveConsentFromConsentSourceWithPrivacyAction(consent: { [key: string]: string }, source: ETCConsentSource, action: ETCConsentAction)
-{
-    TCConsentBridge.saveConsentFromConsentSourceWithPrivacyAction(consent, source, action);
-}
+
+
+
 
 export function statEnterPCToVendorScreen()
 {
