@@ -1,3 +1,8 @@
+## 1.4.2
+
+* Update native dependencies.
+* added proguard rules
+
 ## 1.4.1
 
 * Fixing warnings for bridged functions.
