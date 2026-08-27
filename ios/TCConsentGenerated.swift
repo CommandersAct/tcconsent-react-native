@@ -6,5 +6,5 @@ import Foundation
 
 struct TCConsentReactNativeGenerated
 {
-    static let version = "1.5.0"
+    static let version = "1.5.1"
 }
