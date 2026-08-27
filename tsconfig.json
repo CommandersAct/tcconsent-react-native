@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    "baseUrl": "./",
     "paths": {
       "tcconsent-react-native": ["./src/index"]
     },

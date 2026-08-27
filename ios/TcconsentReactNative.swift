@@ -8,7 +8,6 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     @objc(setSiteIDPrivacyID:privacyID:)
     func setSiteIDPrivacyID(siteID: Double, privacyID: Double) -> Void
     {
-        TCDebug.setDebugLevel(TCLogLevel_Verbose)
         TCMobileConsent.sharedInstance().registerCallback(self)
         TCMobileConsent.sharedInstance().setSiteID(Int32(siteID), andPrivacyID: Int32(privacyID))
         refreshTCUser()
@@ -37,7 +36,22 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
             viewController?.present(PCM, animated: true, completion: nil)
         }
     }
-    
+
+    @objc(showBanner:options:colorScheme:)
+    func showBanner(type: String, options: NSDictionary?, colorScheme: NSDictionary?) -> Void
+    {
+        let bannerType: TCBannerType = (type == "fullScreen") ? .fullScreen : .bottom
+        let bannerOptions = evaluateBannerOptions(options)
+        let bannerTheme = evaluateBannerTheme(colorScheme)
+
+        Task { @MainActor in
+            TCMobileConsent.sharedInstance().showBanner(type: bannerType, options: bannerOptions, theme: bannerTheme)
+            {
+                self.sendEvent(withName: "bannerDetailsClicked", body: nil)
+            }
+        }
+    }
+
     @objc(useACString:)
     func useACString(value: Bool) -> Void
     {
@@ -47,7 +61,6 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     @objc(customPCMSetSiteID:privacyID:)
     func customPCMSetSiteID(siteID: Double, privacyID: Double) -> Void
     {
-        TCDebug.setDebugLevel(TCLogLevel_Verbose)
         TCMobileConsent.sharedInstance().registerCallback(self)
         TCMobileConsent.sharedInstance().customPCMSetSiteID(Int32(siteID), andPrivacyID: Int32(privacyID))
         refreshTCUser()
@@ -210,20 +223,19 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     {
         resolve(TCConsentAPI.shouldDisplayPrivacyCenter())
     }
-    
-/*
-    @objc(switchDefaultState:withRejecter:)
-    func switchDefaultState(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock)
-    {
-        resolve(TCConsentAPI.shouldDisplayPrivacyCenter())
-    }*/
-    
+
     @objc(do_not_track:)
     func do_not_track(value: Bool)
     {
-        TCMobileConsent.sharedInstance().do_not_track = true
+        TCMobileConsent.sharedInstance().do_not_track = value
     }
-    
+
+    @objc(switchDefaultState:)
+    func switchDefaultState(value: Bool)
+    {
+        TCMobileConsent.sharedInstance().switchDefaultState = value
+    }
+
     @objc(setConsentVersion:)
     func setConsentVersion(consentVersion: String)
     {
@@ -266,7 +278,7 @@ class TcconsentReactNative: RCTEventEmitter, TCPrivacyCallbacks
     
     override func supportedEvents() -> [String]
     {
-      return ["consentOutdated", "consentUpdated", "consentCategoryChanged", "significantChangesInPrivacy", "refreshTCUser"]
+      return ["consentOutdated", "consentUpdated", "consentCategoryChanged", "significantChangesInPrivacy", "refreshTCUser", "bannerDetailsClicked"]
     }
     
     func consentOutdated()

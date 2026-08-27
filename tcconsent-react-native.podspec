@@ -12,16 +12,16 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/commandersact/tcconsent-react-native"
   s.license = { :type => "Commercial", :file => "LICENSE" }
   s.authors = { "CommandersAct" => "mobile@commandersact.com" }
-  s.platforms = { :ios => "11.0" }
+  s.platforms = { :ios => "15.1" }
   s.source = { :git => "https://github.com/commandersact/tcconsent-react-native.git", :tag => "#{s.version}" }
-  s.source_files = "ios/**/*.{h,c,m,mm}"
+  s.source_files = "ios/**/*.{h,c,m,mm,swift}"
   s.requires_arc = true
   s.swift_version = "5.0"
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
   s.dependency 'React-Core'
-  s.dependency 'IOSV5-TCCore', '5.4.5'
-  s.dependency 'TCConsent', '5.3.8'
+  s.dependency 'IOSV5-TCCore', '5.4.6'
+  s.dependency 'TCConsent', '5.4.1'
   s.dependency 'TCIAB', '5.2.0'
 
 end

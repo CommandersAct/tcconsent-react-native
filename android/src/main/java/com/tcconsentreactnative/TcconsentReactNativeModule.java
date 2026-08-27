@@ -54,7 +54,6 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   @ReactMethod
   public void setSiteIDPrivacyID(double siteID, double privacyID)
   {
-    TCDebug.setDebugLevel(Log.VERBOSE);
     TCConsent.getInstance().registerCallback(this);
     TCConsent.getInstance().setSiteIDPrivacyIDAppContext((int) siteID, (int) privacyID, getReactApplicationContext());
     refreshTCUser();
@@ -73,12 +72,22 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   }
 
   @ReactMethod
-  public void showPrivacyCenter(String startScreen, String customTitle)
+  public void showPrivacyCenter(String startScreen)
   {
     Intent PCM = new Intent(getReactApplicationContext(), TCPrivacyCenter.class);
     setStartScreen(PCM, startScreen);
     PCM.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     getReactApplicationContext().startActivity(PCM);
+  }
+
+  @ReactMethod
+  public void showBanner(String type, ReadableMap options, ReadableMap colorScheme)
+  {
+    BannerBridgeHelper.showBanner(getCurrentActivity(), type, options, colorScheme, () ->
+      getReactApplicationContext()
+        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+        .emit("bannerDetailsClicked", null)
+    );
   }
 
   @ReactMethod
@@ -408,15 +417,11 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     promise.resolve(TCConsentAPI.shouldDisplayPrivacyCenter(getReactApplicationContext()));
   }
 
-/**
- * function not available for this version, needs native Android SDK changes
- * 
   @ReactMethod
   public void switchDefaultState(boolean value)
   {
     TCConsent.getInstance().switchDefaultState = value;
   }
-**/
 
   @ReactMethod
   public void deactivateBackButton(boolean value)
@@ -424,15 +429,11 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
     TCConsent.getInstance().deactivateBackButton = value;
   }
 
-/**
- * function not available for this version, needs native Android SDK changes
- * 
   @ReactMethod
   public void do_not_track(boolean value)
   {
     TCConsent.getInstance().do_not_track = value;
   }
-**/
 
   @ReactMethod
   public void setConsentVersion(String value)
@@ -444,6 +445,12 @@ public class TcconsentReactNativeModule extends ReactContextBaseJavaModule imple
   public void getConsentVersion(Promise promise)
   {
     promise.resolve(TCConsent.getInstance().consentVersion);
+  }
+
+  @ReactMethod
+  public void shouldForceJsonUpdate(boolean value)
+  {
+    TCConsent.getInstance().shouldForceJsonUpdate(value);
   }
 
   public static WritableArray toWritableStringArray(List<String> array)
