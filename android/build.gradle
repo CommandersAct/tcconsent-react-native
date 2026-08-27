@@ -1,11 +1,16 @@
 buildscript {
+  ext.safeExtGet = { prop, fallback ->
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+  }
+
   repositories {
     google()
     mavenCentral()
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:7.2.1"
+    classpath "com.android.tools.build:gradle:8.7.2"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${safeExtGet('kotlinVersion', '2.1.20')}"
   }
 }
 
@@ -14,6 +19,7 @@ def isNewArchitectureEnabled() {
 }
 
 apply plugin: "com.android.library"
+apply plugin: "org.jetbrains.kotlin.android"
 
 if (isNewArchitectureEnabled()) {
   apply plugin: "com.facebook.react"
@@ -70,8 +76,12 @@ android {
   }
 
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = "17"
   }
 }
 
@@ -86,7 +96,12 @@ dependencies {
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
   implementation 'com.facebook.react:react-native:+'
-  implementation 'com.tagcommander.lib:core:5.4.9'
-  implementation 'com.tagcommander.lib:Consent:5.3.10'
+  implementation 'com.tagcommander.lib:core:5.5.0'
+  implementation 'com.tagcommander.lib:Consent:5.4.0'
+
+  // Needed to build the colorScheme override for showBanner() - matches the
+  // versions com.tagcommander.lib:Consent:5.4.0 itself compiles against.
+  implementation "androidx.compose.ui:ui:1.7.6"
+  implementation "androidx.compose.material3:material3:1.4.0"
 }
 

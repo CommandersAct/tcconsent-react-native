@@ -1,13 +1,19 @@
 {
-  "name": "@commandersact/tcconsent-react-native",
-  "version": "1.4.2",
+  "name": "@commandersact/tcconsent-react-native-noiab",
+  "version": "1.5.0",
   "description": " Commanders Act's TCConsent SDK bridge for react native",
-  "main": "src/index",
-  "module": "src/index",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
   "exports": {
-    ".": "./src/index.tsx"
+    ".": {
+      "types": "./lib/typescript/index.d.ts",
+      "import": "./lib/module/index.js",
+      "require": "./lib/commonjs/index.js",
+      "react-native": "./src/index.tsx"
+    }
   },
   "files": [
     "src",
@@ -28,7 +34,7 @@
     "!**/__mocks__",
     "!**/.*"
   ],
-    "expo": {
+  "expo": {
     "plugin": "./app.plugin.js"
   },
   "scripts": {
@@ -62,10 +68,10 @@
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.2.2",
     "@react-native-community/eslint-config": "^3.0.2",
+    "@react-native/babel-preset": "0.81.6",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "0.70.0",
+    "@types/react": "19.1.10",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
@@ -74,26 +80,25 @@
     "jest": "^28.1.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
-    "react": "18.2.0",
-    "react-native": "^0.72.4",
+    "react": "19.1.4",
+    "react-native": "0.81.6",
     "react-native-builder-bob": "^0.21.3",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
     "typescript": "^5.0.2",
-    "@commandersact/tccore-react-native": "git+https://github.com/commandersact/tccore-react-native#1.3.2"
+    "@commandersact/tccore-react-native": "1.4.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "resolutions": {
-    "@types/react": "17.0.21"
+    "@types/react": "19.1.10"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "@commandersact/tccore-react-native": "1.3.2"
+    "@commandersact/tccore-react-native": "1.4.0"
   },
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">=20.19.4"
   },
   "packageManager": "^yarn@1.22.15",
   "jest": {

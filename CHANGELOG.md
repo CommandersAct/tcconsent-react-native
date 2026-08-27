@@ -1,3 +1,12 @@
+## 1.5.0
+
+* Added the native Consent Banner UI: `showBanner()`, `TCBannerOptions`, and cross-platform `colorScheme` light/dark theming — a lightweight first-layer alternative to the Privacy Center. Non-IAB only; stripped from the IAB npm package build like the other non-IAB-only functions.
+* Exposed native consent-change events to JS: `addConsentUpdatedListener`, `addConsentOutdatedListener`, `addConsentCategoryChangedListener`, `addSignificantChangesInPrivacyListener`.
+* Bridged `switchDefaultState` (iOS + Android) and `shouldForceJsonUpdate` (Android).
+* Fixed iOS hardcoded `do_not_track`, and added for Android.
+* Upgraded native dependencies: Android TCCore to 5.5.0 and Android Consent to 5.4.0; iOS TCConsent to 5.4.1 and IOSV5-TCCore to 5.4.6.
+* Fully rewrote the README: npm-only install (manual linking removed), a complete API reference, an IAB/non-IAB quick-reference table, and a troubleshooting section covering iOS build issues and native debug logging.
+
 ## 1.4.2
 
 * Update native dependencies.
