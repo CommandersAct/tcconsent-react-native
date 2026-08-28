@@ -1,6 +1,6 @@
 {
   "name": "@commandersact/tcconsent-react-native",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": " Commanders Act's TCConsent SDK bridge for react native",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
